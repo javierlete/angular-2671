@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TituloComponent } from './titulo.component';
+import { LabelInputComponent } from './labelinput.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TituloComponent],
+  imports: [RouterOutlet, TituloComponent, LabelInputComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
