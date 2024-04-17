@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TituloComponent } from '../titulo.component';
 
 @Component({
   selector: 'app-cabecera',
   standalone: true,
-  imports: [],
+  imports: [TituloComponent],
   templateUrl: './cabecera.component.html',
   styleUrl: './cabecera.component.css'
 })
