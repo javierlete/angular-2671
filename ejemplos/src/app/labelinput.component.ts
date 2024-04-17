@@ -8,7 +8,7 @@ import { Component, Input } from "@angular/core";
             <input type="{{tipo}}" placeholder="{{etiqueta}}">
         </div>
     `,
-    styles: 'label { display: inline-block; width: 10em; }',
+    styleUrl: './labelinput.component.css',
     standalone: true,
 })
 export class LabelInputComponent {
