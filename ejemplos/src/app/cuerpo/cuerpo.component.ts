@@ -10,5 +10,10 @@ import { ContadorComponent } from '../contador.component';
   styleUrl: './cuerpo.component.css'
 })
 export class CuerpoComponent {
+  contadorActual?: number;
+
+  onCambioNumero(numero: number) {
+    this.contadorActual = numero;
+  }
 
 }

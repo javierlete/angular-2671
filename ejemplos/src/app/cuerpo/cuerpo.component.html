@@ -8,6 +8,7 @@
         <labelinput [etiqueta]="'Email'" tipo="email"></labelinput>
     </form>
 
-    <contador [inicial]="1"></contador>
-    
+    <contador [inicial]="1" (cambioNumero)="onCambioNumero($event)"></contador>
+    <h1>{{contadorActual}}</h1>
+
 </main>
