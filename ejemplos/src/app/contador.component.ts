@@ -6,7 +6,7 @@ import { Component, Input } from "@angular/core";
     standalone: true,
 })
 export class ContadorComponent {
-    numero = 0;
+    @Input('inicial') numero = 0;
 
     onBotonPulsado() {
         this.numero++;
