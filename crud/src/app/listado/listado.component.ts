@@ -14,8 +14,16 @@ import { ProductoService } from '../producto.service';
 export class ListadoComponent {
   servicio: ProductoService = inject(ProductoService);
   productos: Producto[] = [];
-
+  
   constructor() {
+    this.cargarProductos();
+  }
+  
+  cargarProductos() {
     this.servicio.obtenerTodos().then(productosRecibidos => this.productos = productosRecibidos);
+  }
+  
+  borrar(id: number) {
+    this.servicio.borrar(id).then(() => this.cargarProductos());
   }
 }

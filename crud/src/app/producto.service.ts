@@ -16,4 +16,8 @@ export class ProductoService {
     const respuesta = await fetch(this.url + id);
     return respuesta.json();
   }
+  
+  async borrar(id: number): Promise<any> {
+    return await fetch(this.url + id, { method: 'DELETE' });
+  }
 }
