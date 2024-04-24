@@ -1,17 +1,17 @@
-<form>
+<form [formGroup]="form">
     <fieldset>
         <legend>Formulario de producto</legend>
         <div>
             <label for="id">Id</label>
-            <input type="text" id="id">
+            <input type="text" id="id" formControlName="id">
         </div>
         <div>
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre">
+            <input type="text" id="nombre" formControlName="nombre">
         </div>
         <div>
             <label for="precio">Precio</label>
-            <input type="number" step=".01" id="precio">
+            <input type="number" step=".01" id="precio" formControlName="precio">
         </div>
         <div>
             <button routerLink="">Guardar</button>
