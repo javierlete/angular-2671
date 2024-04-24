@@ -1,0 +1,29 @@
+div {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    width: 5rem;
+}
+
+input {
+    flex-grow: 1;
+}
+
+fieldset, input, button {
+    border: 1px solid darkgray;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+fieldset {
+    padding: 1rem;
+}
+
+button {
+    background-color: rgb(53, 53, 191);
+    color: white;
+    margin-right: 0.5rem;
+    text-decoration: none;
+}
