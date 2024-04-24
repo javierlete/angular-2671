@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Producto } from '../producto';
 import { CommonModule } from '@angular/common';
+import { ProductoService } from '../producto.service';
 
 @Component({
   selector: 'app-listado',
@@ -11,9 +12,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './listado.component.css'
 })
 export class ListadoComponent {
-  productos: Producto[] = [
-    { id: 1, nombre: 'Monitor', precio: 123.45 },
-    { id: 2, nombre: 'Portátil', precio: 1234.56 },
-    { id: 3, nombre: 'Ratón', precio: 12.34 },
-  ];
+  servicio: ProductoService = inject(ProductoService);
+  productos: Producto[] = [];
+
+  constructor() {
+    this.productos = this.servicio.obtenerTodos();
+  }
 }
