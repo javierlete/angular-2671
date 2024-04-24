@@ -1,0 +1,40 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead, tfoot {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+td, th {
+    border: 1px solid darkgray;
+    padding: 0.4rem;
+}
+
+th:first-child, th:nth-child(3), td:nth-child(3) {
+    text-align: right;
+}
+
+thead th:nth-child(2), thead th:last-child {
+    text-align: left;
+}
+
+a {
+    margin-right: 0.5rem;
+    text-decoration: none;
+    border: 1px solid darkgray;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: rgb(53, 53, 191);
+    color: white;
+}
+
+a:nth-child(2) {
+    background-color: red;
+}
