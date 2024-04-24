@@ -1,0 +1,7 @@
+{
+    "productos": [
+        { "id": 1, "nombre": "Monitor", "precio": 123.45 },
+        { "id": 2, "nombre": "Portátil", "precio": 1234.56 },
+        { "id": 3, "nombre": "Ratón", "precio": 12.34 }
+      ]
+}
