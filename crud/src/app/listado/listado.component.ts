@@ -16,6 +16,6 @@ export class ListadoComponent {
   productos: Producto[] = [];
 
   constructor() {
-    this.productos = this.servicio.obtenerTodos();
+    this.servicio.obtenerTodos().then(productosRecibidos => this.productos = productosRecibidos);
   }
 }
