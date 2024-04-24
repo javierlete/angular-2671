@@ -5,4 +5,5 @@ import { FormularioComponent } from './formulario/formulario.component';
 export const routes: Routes = [
     { path: '', component: ListadoComponent },
     { path: 'formulario', component: FormularioComponent },
+    { path: 'formulario/:id', component: FormularioComponent },
 ];
