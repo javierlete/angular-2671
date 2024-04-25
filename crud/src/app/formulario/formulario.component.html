@@ -1,20 +1,28 @@
-<form [formGroup]="form" (submit)="guardar()">
+<form class="container" [formGroup]="form" (submit)="guardar()">
     <fieldset>
         <legend>Formulario de producto</legend>
-        <div>
-            <label for="id">Id</label>
-            <input type="text" id="id" formControlName="id">
+        <div class="row mb-2">
+            <label class="col-sm-2 form-label" for="id">Id</label>
+            <div class="col-sm">
+                <input class="form-control" type="text" id="id" formControlName="id">
+            </div>
         </div>
-        <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" formControlName="nombre">
+        <div class="row mb-2">
+            <label class="col-sm-2 form-label" for="nombre">Nombre</label>
+            <div class="col-sm">
+                <input class="form-control" type="text" id="nombre" formControlName="nombre">
+            </div>
         </div>
-        <div>
-            <label for="precio">Precio</label>
-            <input type="number" step=".01" id="precio" formControlName="precio">
+        <div class="row mb-2">
+            <label class="col-sm-2 form-label" for="precio">Precio</label>
+            <div class="col-sm">
+                <input class="form-control" type="number" step=".01" id="precio" formControlName="precio">
+            </div>
         </div>
-        <div>
-            <button>Guardar</button>
+        <div class="row mb-2">
+            <div class="offset-sm-2 col-sm">
+                <button class="btn btn-primary">Guardar</button>
+            </div>
         </div>
     </fieldset>
 </form>
