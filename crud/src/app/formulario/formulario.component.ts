@@ -2,6 +2,8 @@ import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductoService } from '../producto.service';
+import { Producto } from '../producto';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-formulario',
@@ -13,6 +15,7 @@ import { ProductoService } from '../producto.service';
 export class FormularioComponent {
   ruta = inject(ActivatedRoute);
   servicio = inject(ProductoService);
+  location = inject(Location);
 
   form = new FormGroup({
     id: new FormControl(0),
@@ -28,5 +31,17 @@ export class FormularioComponent {
         productoRecibido => this.form.setValue(productoRecibido)
       );
     }
+  }
+
+  async guardar() {
+    const producto = this.form.value as Producto;
+
+    if(producto.id) {
+      await this.servicio.modificar(producto);
+    } else {
+      await this.servicio.insertar(producto);
+    }
+
+    this.location.back();
   }
 }
