@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
+import { catchError, tap } from 'rxjs';
 
 @Component({
   selector: 'app-heroes',
@@ -29,5 +30,12 @@ export class HeroesComponent implements OnInit {
       .subscribe(hero => {
         this.heroes.push(hero);
       });
+  }
+
+  delete(hero: Hero): void {
+    // TODO hacer que no borre fila visual cuando hay un error
+    this.heroService.deleteHero(hero.id).subscribe(
+      _ => this.heroes = this.heroes.filter(h => h !== hero)
+    );
   }
 }
