@@ -12,12 +12,12 @@ import { Location } from '@angular/common';
 export class HeroDetailComponent {
   @Input() hero?: Hero;
 
-  constructor(private location: Location, private heroService: HeroService, private route: ActivatedRoute) {}
+  constructor(private location: Location, private heroService: HeroService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getHero();
   }
-  
+
   getHero(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.heroService.getHero(id)
@@ -26,5 +26,12 @@ export class HeroDetailComponent {
 
   goBack() {
     this.location.back();
+  }
+
+  save() {
+    if (this.hero) {
+      this.heroService.updateHero(this.hero)
+        .subscribe(() => this.goBack());
+    }
   }
 }
