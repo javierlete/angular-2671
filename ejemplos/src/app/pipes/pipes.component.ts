@@ -1,9 +1,10 @@
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pipes',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css'
 })
