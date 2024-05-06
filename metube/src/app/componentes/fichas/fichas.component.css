@@ -1,0 +1,8 @@
+div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+app-ficha {
+    width: 33.33333%;
+}
