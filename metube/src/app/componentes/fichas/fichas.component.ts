@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { VIDEOS } from '../../mocks/mock-videos';
+import { Component, inject } from '@angular/core';
+import { Video } from '../../tipos/video';
+import { VideoService } from '../../servicios/video.service';
 
 @Component({
   selector: 'app-fichas',
@@ -7,5 +8,11 @@ import { VIDEOS } from '../../mocks/mock-videos';
   styleUrl: './fichas.component.css'
 })
 export class FichasComponent {
-  videos = VIDEOS;
+  videos: Video[] = [];
+  servicio = inject(VideoService);
+
+  constructor() {
+    this.servicio.obtenerTodos().subscribe(
+      videosRecibidos => this.videos = videosRecibidos);
+  }
 }

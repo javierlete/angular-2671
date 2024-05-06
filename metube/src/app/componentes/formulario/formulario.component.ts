@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Video } from '../../tipos/video';
-import { VIDEOS } from '../../mocks/mock-videos';
 import { Location } from '@angular/common';
+import { VideoService } from '../../servicios/video.service';
 
 @Component({
   selector: 'app-formulario',
@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 })
 export class FormularioComponent {
   location = inject(Location);
+  servicio = inject(VideoService);
 
   video: Video = {
     id: 0,
@@ -24,7 +25,9 @@ export class FormularioComponent {
 
   guardar() {
     console.log(this.video);
-    VIDEOS.push(this.video);
-    this.location.back();
+
+    this.servicio.alta(this.video).subscribe(
+      () => this.location.back()
+    );
   }
 }

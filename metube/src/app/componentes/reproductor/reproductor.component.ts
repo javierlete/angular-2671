@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { VIDEOS } from '../../mocks/mock-videos';
 import { Video } from '../../tipos/video';
+import { VideoService } from '../../servicios/video.service';
 
 @Component({
   selector: 'app-reproductor',
@@ -15,11 +15,16 @@ export class ReproductorComponent {
 
   ruta = inject(ActivatedRoute);
   sanitizer = inject(DomSanitizer);
+  servicio = inject(VideoService);
 
   constructor() {
     const id = Number(this.ruta.snapshot.params['id']);
 
-    this.video = VIDEOS.find(v => v.id === id)!;
-    this.urlVideo = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video.codigo);
+    this.servicio.obtenerPorId(id).subscribe(
+      videoRecibido => {
+        this.video = videoRecibido;
+        this.urlVideo = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video.codigo);
+      }      
+    );
   }
 }
