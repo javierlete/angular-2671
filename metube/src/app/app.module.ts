@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { FichaComponent } from './componentes/ficha/ficha.component';
 import { FichasComponent } from './componentes/fichas/fichas.component';
 import { ReproductorComponent } from './componentes/reproductor/reproductor.component';
+import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     FichaComponent,
     FichasComponent,
-    ReproductorComponent
+    ReproductorComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
