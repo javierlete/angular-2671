@@ -1,0 +1,24 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "titulo": "Smoke On The Water",
+      "codigo": "Q2FzZSBD5LE",
+      "foto": "https://fmrockandpop.com/media/k2/items/cache/b31a1e0cb6278e5bc3b5270b10883131_L.webp?t=20240304_141819",
+      "horas": 0,
+      "minutos": 6,
+      "segundos": 15,
+      "descripcion": "Emblemática canción de Deep Purple"
+    },
+    {
+      "id": 2,
+      "foto": "https://res.cloudinary.com/practicaldev/image/fetch/s--VU7rhZIX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_100%2Cw_350/https://pro.forem.tools/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--12e5895ae8677b4747732cb70bd7190dc900159b/Next_Hydration_Error_Terminal.png",
+      "horas": 50,
+      "minutos": 40,
+      "segundos": 2,
+      "titulo": "PRueba",
+      "descripcion": "asdfasdfadsfadsf",
+      "codigo": "SVOuYquXuuc"
+    }
+  ]
+}

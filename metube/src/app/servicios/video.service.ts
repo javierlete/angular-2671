@@ -1,22 +1,24 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Video } from '../tipos/video';
-import { VIDEOS } from '../mocks/mock-videos';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VideoService {
+  url = 'http://127.0.0.1:3000/videos/';
+  http = inject(HttpClient);
+
   obtenerTodos(): Observable<Video[]> {
-    return of(VIDEOS);
+    return this.http.get<Video[]>(this.url);
   }
 
   obtenerPorId(id: number): Observable<Video> {
-    return of(VIDEOS.find(v => v.id === id)!);
+    return this.http.get<Video>(this.url + id);
   }
 
   alta(video: Video): Observable<Video> {
-    VIDEOS.push(video);
-    return of(video);
+    return this.http.post<Video>(this.url, video);
   }
 }
