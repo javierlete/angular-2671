@@ -1,6 +1,6 @@
 <figure>
-    <img src="https://picsum.photos/400/225">
-    <figcaption>01:02:03</figcaption>
+    <img src="{{video.foto}}">
+    <figcaption>{{video.horas | number : '2.0-0'}}:{{video.minutos | number : '2.0-0'}}:{{video.segundos | number : '2.0-0'}}</figcaption>
 </figure>
-<h2>Título del video</h2>
-<p>Descripción</p>
+<h2>{{video.titulo}}</h2>
+<p>{{video.descripcion}}</p>
