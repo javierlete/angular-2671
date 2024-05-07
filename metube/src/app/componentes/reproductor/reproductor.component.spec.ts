@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../../app-routing.module';
+import { SeguroPipe } from '../../pipes/seguro.pipe';
 import { ReproductorComponent } from './reproductor.component';
 
 describe('ReproductorComponent', () => {
@@ -8,7 +11,8 @@ describe('ReproductorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ReproductorComponent]
+      declarations: [ReproductorComponent, SeguroPipe],
+      imports: [HttpClientModule, AppRoutingModule],
     })
     .compileComponents();
     

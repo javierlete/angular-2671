@@ -10,8 +10,7 @@ import { VideoService } from '../../servicios/video.service';
   styleUrl: './reproductor.component.css'
 })
 export class ReproductorComponent {
-  video!: Video;
-  urlVideo!: SafeResourceUrl;
+  video?: Video;
 
   ruta = inject(ActivatedRoute);
   sanitizer = inject(DomSanitizer);
@@ -21,10 +20,6 @@ export class ReproductorComponent {
     const id = Number(this.ruta.snapshot.params['id']);
 
     this.servicio.obtenerPorId(id).subscribe(
-      videoRecibido => {
-        this.video = videoRecibido;
-        this.urlVideo = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video.codigo);
-      }      
-    );
+      videoRecibido => this.video = videoRecibido);
   }
 }

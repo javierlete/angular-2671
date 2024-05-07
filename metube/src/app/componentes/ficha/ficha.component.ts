@@ -7,5 +7,5 @@ import { Video } from '../../tipos/video';
   styleUrl: './ficha.component.css'
 })
 export class FichaComponent {
-  @Input() video!: Video;
+  @Input() video?: Video;
 }

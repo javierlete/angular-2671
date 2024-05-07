@@ -9,6 +9,7 @@ import { ReproductorComponent } from './componentes/reproductor/reproductor.comp
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SeguroPipe } from './pipes/seguro.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     FichaComponent,
     FichasComponent,
     ReproductorComponent,
-    FormularioComponent
+    FormularioComponent,
+    SeguroPipe
   ],
   imports: [
     BrowserModule,
