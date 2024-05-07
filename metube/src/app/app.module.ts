@@ -10,6 +10,7 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SeguroPipe } from './pipes/seguro.pipe';
+import { ValoracionComponent } from './componentes/valoracion/valoracion.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SeguroPipe } from './pipes/seguro.pipe';
     FichasComponent,
     ReproductorComponent,
     FormularioComponent,
-    SeguroPipe
+    SeguroPipe,
+    ValoracionComponent
   ],
   imports: [
     BrowserModule,

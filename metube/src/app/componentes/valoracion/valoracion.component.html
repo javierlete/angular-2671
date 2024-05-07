@@ -1,0 +1,4 @@
+<p *ngIf="valoracion">
+    Valoración: 
+    <input #inputValoracion type="number" value="{{valoracion}}" (input)="onCambio(+inputValoracion.value)">
+</p>
