@@ -30,4 +30,15 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('MeTube');
   });
+
+  it('debería tener un vínculo "Nuevo video"', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const deberiaSer = 'Nuevo video';
+    const valorEncontrado = compiled.querySelector('a')?.textContent;
+    
+    expect(valorEncontrado).toEqual(deberiaSer);
+  });
 });
