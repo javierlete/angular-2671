@@ -7,4 +7,5 @@ export interface Video {
     titulo: string;
     descripcion: string;
     codigo: string;
+    valoracion?: number;
 }
