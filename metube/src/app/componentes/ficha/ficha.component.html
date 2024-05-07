@@ -7,5 +7,5 @@
 </figure>
 <h2>{{video?.titulo}}</h2>
 <p>{{video?.descripcion}}</p>
-<app-valoracion [(valoracion)]="video!.valoracion"/>
+<app-valoracion [valoracion]="video!.valoracion" (valoracionChange)="onValoracionChange(video!.id, $event)"/>
 <pre>{{video | json}}</pre>

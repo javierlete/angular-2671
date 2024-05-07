@@ -21,4 +21,8 @@ export class VideoService {
   alta(video: Video): Observable<Video> {
     return this.http.post<Video>(this.url, video);
   }
+
+  cambiarValoracion(id: number, valoracion: number) {
+    return this.http.patch<Video>(this.url + id, { id, valoracion });
+  }
 }

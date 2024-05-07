@@ -9,7 +9,7 @@
       "minutos": 6,
       "segundos": 15,
       "descripcion": "Emblemática canción de Deep Purple",
-      "valoracion": 10
+      "valoracion": 9
     },
     {
       "id": 2,
@@ -19,7 +19,8 @@
       "segundos": 2,
       "titulo": "PRueba",
       "descripcion": "asdfasdfadsfadsf",
-      "codigo": "SVOuYquXuuc"
+      "codigo": "SVOuYquXuuc",
+      "valoracion": 5
     }
   ]
 }
