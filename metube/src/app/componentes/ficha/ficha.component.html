@@ -1,11 +1,21 @@
-<figure>
-    <a routerLink="reproductor/{{video?.id}}">
-        <img src="{{video?.foto}}">
-    </a>
-    <figcaption>{{video?.horas | number : '2.0-0'}}:{{video?.minutos | number : '2.0-0'}}:{{video?.segundos | number :
-        '2.0-0'}}</figcaption>
-</figure>
-<h2>{{video?.titulo}}</h2>
-<p>{{video?.descripcion}}</p>
-<app-valoracion [valoracion]="video!.valoracion" (valoracionChange)="onValoracionChange(video!.id, $event)"/>
-<pre>{{video | json}}</pre>
+<div class="col">
+    <div class="card h-100">
+        <figure class="card-img-top position-relative">
+            <a routerLink="reproductor/{{video?.id}}">
+                <img src="{{video?.foto}}" class="w-100">
+            </a>
+            <figcaption class="position-absolute bottom-0 end-0 text-white bg-dark m-3 p-1 rounded" style="--bs-bg-opacity: .5;">{{video?.horas | number : '2.0-0'}}:{{video?.minutos | number : '2.0-0'}}:{{video?.segundos | number :
+                '2.0-0'}}</figcaption>
+        </figure>
+        
+        <div class="card-body">
+            <h5 class="card-title">{{video?.titulo}}</h5>
+            <p class="card-text">{{video?.descripcion}}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-body-secondary">
+                <app-valoracion [valoracion]="video!.valoracion" (valoracionChange)="onValoracionChange(video!.id, $event)" />
+            </small>        
+        </div>
+    </div>
+</div>
