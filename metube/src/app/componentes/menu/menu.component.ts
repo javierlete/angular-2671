@@ -7,7 +7,7 @@ import { OpcionMenu } from '../../tipos/opcion-menu';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
-  @Input() expandir: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' = 'sm';
-  @Input() titulo: OpcionMenu = { etiqueta: 'TITULO', vinculo: '' };
-  @Input() opcionesMenu: OpcionMenu[] = [];
+  @Input() expandir?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' = 'sm';
+  @Input() titulo?: OpcionMenu = { etiqueta: 'TITULO', vinculo: '' };
+  @Input() opcionesMenu?: OpcionMenu[] = [];
 }

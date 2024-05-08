@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { OpcionMenu } from './tipos/opcion-menu';
+import { MenuService } from './servicios/menu.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  titulo = 'MeTube';
+  titulo?: OpcionMenu;
+  opciones?: OpcionMenu[];
+
+  servicio = inject(MenuService);
+
+  constructor() {
+    this.servicio.obtenerTodos().subscribe(
+      opciones => {
+        console.log(opciones);
+        
+        this.titulo = opciones[0];
+        this.opciones = opciones.slice(1);
+      }
+    )
+  }
 }

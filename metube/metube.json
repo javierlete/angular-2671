@@ -1,4 +1,9 @@
 {
+  "menu" : [
+    { "id": 1, "etiqueta": "MeTube", "vinculo": "" },
+    { "id": 2, "etiqueta": "Principal", "vinculo": "" },
+    { "id": 3, "etiqueta": "Nuevo video", "vinculo": "formulario" }
+  ],
   "videos": [
     {
       "id": 1,
