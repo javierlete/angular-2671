@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SeguroPipe } from './pipes/seguro.pipe';
 import { ValoracionComponent } from './componentes/valoracion/valoracion.component';
 import { MenuComponent } from './componentes/menu/menu.component';
+import { LabelInputComponent } from './componentes/label-input/label-input.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuComponent } from './componentes/menu/menu.component';
     FormularioComponent,
     SeguroPipe,
     ValoracionComponent,
-    MenuComponent
+    MenuComponent,
+    LabelInputComponent
   ],
   imports: [
     BrowserModule,

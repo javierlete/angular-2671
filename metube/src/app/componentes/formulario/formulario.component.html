@@ -1,3 +1,16 @@
+<app-label-input id="id" tipo="number" etiqueta="Id" [(valor)]="video.id" (valorChange)="video.id = +$event"/>
+<app-label-input id="foto" etiqueta="Foto" [valor]="video.foto"/>
+<app-label-input id="horas" tipo="number" etiqueta="Horas" [valor]="video.horas"/>
+<app-label-input id="minutos" tipo="number" etiqueta="Minutos" [valor]="video.minutos"/>
+<app-label-input id="segundos" tipo="number" etiqueta="Segundos" [valor]="video.segundos"/>
+<app-label-input id="titulo" etiqueta="Título" [valor]="video.titulo"/>
+<app-label-input id="descripcion" etiqueta="Descripción" [valor]="video.descripcion"/>
+<app-label-input id="codigo" etiqueta="Código" [valor]="video.codigo"/>
+
+<button class="btn btn-primary" (click)="guardar()">Guardar</button>
+
+<pre>{{video | json}}</pre>
+
 <input type="number" [(ngModel)]="video.id" placeholder="Id">
 <input [(ngModel)]="video.foto" placeholder="Foto">
 <input type="number" [(ngModel)]="video.horas" placeholder="Horas">
@@ -6,4 +19,3 @@
 <input [(ngModel)]="video.titulo" placeholder="Título">
 <input [(ngModel)]="video.descripcion" placeholder="Descripción">
 <input [(ngModel)]="video.codigo" placeholder="Código">
-<button (click)="guardar()">Guardar</button>

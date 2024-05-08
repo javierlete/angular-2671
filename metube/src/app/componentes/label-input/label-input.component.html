@@ -1,0 +1,6 @@
+<div class="row mb-3">
+    <label for="{{id}}" class="col-sm-2 col-form-label">{{etiqueta}}</label>
+    <div class="col-sm-10">
+        <input type="{{tipo}}" class="form-control" id="{{id}}" value="{{valor}}" (input)="onCambio(inputValor.value)" #inputValor>
+    </div>
+</div>
