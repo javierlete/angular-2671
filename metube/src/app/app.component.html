@@ -1,5 +1,8 @@
-<h1 routerLink="">{{titulo}}</h1>
-<nav>
-    <a routerLink="formulario">Nuevo video</a>
-</nav>
-<router-outlet/>
+<app-menu 
+    expandir="sm"
+    [titulo]="{ etiqueta: 'MeTube', vinculo: '' }"
+    [opcionesMenu]="[
+        { etiqueta: 'Principal', vinculo: '' }, 
+        { etiqueta: 'Nuevo video', vinculo: 'formulario' },
+    ]"/>
+<router-outlet />
