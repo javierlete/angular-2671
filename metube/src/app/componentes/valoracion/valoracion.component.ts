@@ -9,6 +9,7 @@ export class ValoracionComponent {
   @Input() valoracion?: number;
   @Input() minimo = 0;
   @Input() maximo = 10;
+  @Input() tipo: 'cuadro' | 'estrellas' = 'cuadro';
   
   @Output() valoracionChange = new EventEmitter<number>();
 
@@ -17,5 +18,14 @@ export class ValoracionComponent {
       this.valoracion = numero;
       this.valoracionChange.emit(numero);
     }
+  }
+
+  estrellas() {
+    const arr = Array(this.maximo);
+    
+    arr.fill(true, 0, Number(this.valoracion) + this.minimo);
+    arr.fill(false, this.valoracion, this.maximo);
+
+    return arr;
   }
 }
