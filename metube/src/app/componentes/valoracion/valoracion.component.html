@@ -1,4 +1,8 @@
-<p *ngIf="valoracion">
-    Valoración: 
-    <input #inputValoracion type="number" value="{{valoracion}}" (input)="onCambio(+inputValoracion.value)">
-</p>
+<div>
+    <label for="">Valoración: </label>
+    <div style="width: 9rem;" class="input-group" *ngIf="valoracion">
+        <button (click)="onCambio(+inputValoracion.value - 1)" class="fs-3 fw-bold btn btn-secondary">-</button>
+        <input readonly class="fs-3 fw-bold form-control text-center" #inputValoracion type="text" value="{{valoracion}}">
+        <button (click)="onCambio(+inputValoracion.value + 1)" class="fs-3 fw-bold btn btn-secondary">+</button>
+    </div>
+</div>

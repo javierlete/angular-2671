@@ -10,6 +10,7 @@ export class ValoracionComponent {
   @Output() valoracionChange = new EventEmitter<number>();
 
   onCambio(numero: number) {
+    this.valoracion = numero;
     this.valoracionChange.emit(numero);
   }
 }

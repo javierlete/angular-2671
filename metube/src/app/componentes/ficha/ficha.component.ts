@@ -14,8 +14,6 @@ export class FichaComponent {
   onValoracionChange(id: number, valoracion: number) {
     console.log(id, valoracion);
 
-    this.servicio.cambiarValoracion(id, valoracion).subscribe(
-      () => this.video!.valoracion = valoracion
-    );
+    this.servicio.cambiarValoracion(id, valoracion).subscribe();
   }
 }
