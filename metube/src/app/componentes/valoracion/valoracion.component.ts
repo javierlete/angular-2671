@@ -28,4 +28,8 @@ export class ValoracionComponent {
 
     return arr;
   }
+
+  valorar(posicion: number) {
+    this.onCambio(posicion + this.minimo);
+  }
 }

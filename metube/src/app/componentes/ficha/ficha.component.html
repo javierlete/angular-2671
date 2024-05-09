@@ -15,7 +15,6 @@
         <div class="card-footer">
             <small class="text-body-secondary">
                 <app-valoracion tipo="estrellas" [minimo]="1" [maximo]="5" [valoracion]="video!.valoracion" (valoracionChange)="onValoracionChange(video!.id, $event)" />
-                <app-valoracion tipo="cuadro" [minimo]="1" [maximo]="5" [valoracion]="video!.valoracion" (valoracionChange)="onValoracionChange(video!.id, $event)" />
             </small>        
         </div>
     </div>
