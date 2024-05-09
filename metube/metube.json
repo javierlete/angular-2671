@@ -1,8 +1,20 @@
 {
-  "menu" : [
-    { "id": 1, "etiqueta": "MeTube", "vinculo": "" },
-    { "id": 2, "etiqueta": "Principal", "vinculo": "" },
-    { "id": 3, "etiqueta": "Nuevo video", "vinculo": "formulario" }
+  "menu": [
+    {
+      "id": 1,
+      "etiqueta": "MeTube",
+      "vinculo": ""
+    },
+    {
+      "id": 2,
+      "etiqueta": "Principal",
+      "vinculo": ""
+    },
+    {
+      "id": 3,
+      "etiqueta": "Nuevo video",
+      "vinculo": "formulario"
+    }
   ],
   "videos": [
     {
@@ -26,6 +38,18 @@
       "descripcion": "asdfasdfadsfadsf",
       "codigo": "SVOuYquXuuc",
       "valoracion": 3
+    },
+    {
+      "id": 3,
+      "foto": "https://i.ytimg.com/vi/1JaGC--d7AI/maxresdefault.jpg",
+      "horas": 0,
+      "minutos": 6,
+      "segundos": 4,
+      "titulo": "Hyperventilate",
+      "descripcion": "Tema de Frost",
+      "codigo": "SVGjOUnQZ58",
+      "valoracion": 4,
+      "ratio": "4x3"
     }
   ]
 }

@@ -8,4 +8,5 @@ export interface Video {
     descripcion: string;
     codigo: string;
     valoracion?: number;
+    ratio?: '1x1' | '4x3' | '16x9' | '21x9';
 }

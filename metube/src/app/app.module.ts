@@ -13,6 +13,7 @@ import { SeguroPipe } from './pipes/seguro.pipe';
 import { ValoracionComponent } from './componentes/valoracion/valoracion.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { LabelInputComponent } from './componentes/label-input/label-input.component';
+import { ReproductorYoutubeComponent } from './componentes/reproductor-youtube/reproductor-youtube.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LabelInputComponent } from './componentes/label-input/label-input.compo
     SeguroPipe,
     ValoracionComponent,
     MenuComponent,
-    LabelInputComponent
+    LabelInputComponent,
+    ReproductorYoutubeComponent
   ],
   imports: [
     BrowserModule,

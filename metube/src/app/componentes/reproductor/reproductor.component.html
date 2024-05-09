@@ -1,5 +1,1 @@
-<div class="ratio ratio-16x9">
-    <iframe [src]="'https://www.youtube.com/embed/' + video?.codigo | seguro" title="{{video?.titulo}}"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<app-reproductor-youtube [codigo]="video!.codigo" [titulo]="video?.titulo" [ratio]="video?.ratio"/>
