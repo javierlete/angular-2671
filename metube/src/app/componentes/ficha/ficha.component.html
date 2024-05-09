@@ -14,7 +14,7 @@
         </div>
         <div class="card-footer">
             <small class="text-body-secondary">
-                <app-valoracion [valoracion]="video!.valoracion" (valoracionChange)="onValoracionChange(video!.id, $event)" />
+                <app-valoracion [minimo]="1" [maximo]="5" [valoracion]="video!.valoracion" (valoracionChange)="onValoracionChange(video!.id, $event)" />
             </small>        
         </div>
     </div>
