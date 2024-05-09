@@ -13,7 +13,14 @@ export class LabelInputComponent {
   @Input() valor?: string | number = '';
   @Output() valorChange = new EventEmitter<string | number>();
 
-  onCambio(valor: string | number) {
+  onCambio(valor: string) {
+    const numero = parseFloat(valor as string);
+    
+    if(numero) {
+      this.valorChange.emit(numero);
+      return;
+    }
+
     this.valorChange.emit(valor);
   }
 }
