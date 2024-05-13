@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'material-design';
+  saludo = 'Dime tu nombre para que te salude';
+  saludar(texto: string) {
+    this.saludo = 'Hola ' + texto;
+  }
 }
